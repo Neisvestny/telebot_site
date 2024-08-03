@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram Web App</title>
+    <script>
+        function sendData() {
+            const data = { message: "Hello from Web App!" };
+            Telegram.WebApp.sendData(JSON.stringify(data));  // Передает данные обратно боту
+        }
+
+        window.onload = function() {
+            Telegram.WebApp.ready();  // Сообщаем Telegram, что приложение готово
+        };
+    </script>
+</head>
+<body>
+    <h1>Welcome to Telegram Web App!</h1>
+    <button onclick="sendData()">Send Data to Bot</button>
+</body>
+</html>
